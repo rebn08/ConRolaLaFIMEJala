@@ -40,12 +40,24 @@
             background-color: #0d131f; 
             color: #f8fafc; 
         }
-        
-        /* Estilos dinámicos para los botones por pestaña */
-        .tab-btn.active-sistemas { border-color: #60ef65; color: #60ef65; background-color: rgba(96, 239, 101, 0.12); }
-        .tab-btn.active-mecanica { border-color: #f9c41a; color: #f9c41a; background-color: rgba(249, 196, 26, 0.12); }
-        .tab-btn.active-mecatroni { border-color: #fb6023; color: #fb6023; background-color: rgba(251, 96, 35, 0.12); }
-        .tab-btn.active-biomedica { border-color: #16c6ed; color: #16c6ed; background-color: rgba(22, 198, 237, 0.12); }
+
+        /* Estilo base inactivo (Mismo estilo que 'Descargar Plan PDF') */
+        .tab-btn {
+            background-color: #161f30;
+            color: #e2e8f0;
+            border: 1px solid #334155;
+        }
+        .tab-btn:hover {
+            background-color: #1e293b;
+        }
+
+        /* Colores dinámicos al activarse */
+        .tab-btn.active-estudiantes { background-color: #60ef65; color: #020617; border-color: #60ef65; }
+        .tab-btn.active-docentes    { background-color: #16c6ed; color: #020617; border-color: #16c6ed; }
+        .tab-btn.active-sistemas    { background-color: #60ef65; color: #020617; border-color: #60ef65; }
+        .tab-btn.active-mecanica    { background-color: #f9c41a; color: #020617; border-color: #f9c41a; }
+        .tab-btn.active-mecatroni   { background-color: #fb6023; color: #020617; border-color: #fb6023; }
+        .tab-btn.active-biomedica   { background-color: #16c6ed; color: #020617; border-color: #16c6ed; }
     </style>
 </head>
 <body class="font-sans antialiased selection:bg-[#16c6ed] selection:text-slate-900">
@@ -65,7 +77,7 @@
 
     <!-- Hero Section -->
     <section class="px-4 py-10 md:py-16 text-center max-w-4xl mx-auto">
-        <!-- Logo Hero SVG Ligero -->
+        <!-- Avatar Icon SVG -->
         <div class="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 flex items-center justify-center bg-[#161f30] rounded-full border-2 border-[#16c6ed] shadow-xl shadow-[#16c6ed]/10">
             <i class="fa-solid fa-user-gear text-5xl md:text-6xl text-[#16c6ed]"></i>
         </div>
@@ -82,168 +94,52 @@
             Un modelo enfocado en la vida diaria de alumnos y docentes: Climatización garantizada, certidumbre laboral, trámites digitales inmediatos y laboratorios de vanguardia.
         </p>
 
-        <!-- Los 3 Botones Principales -->
+        <!-- Botones de Acción Directa -->
         <div class="flex flex-wrap justify-center gap-3">
-            <a href="#estudiantes" class="bg-[#60ef65] hover:bg-emerald-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl text-xs md:text-sm shadow-lg transition flex items-center gap-2">
-                🎓 Propuestas para Estudiantes
+            <a href="#propuestas" onclick="switchCategory('estudiantes')" class="bg-[#161f30] hover:bg-slate-800 text-slate-200 border border-slate-700 font-extrabold px-5 py-3 rounded-xl text-xs md:text-sm shadow-lg transition flex items-center gap-2">
+                🎓 Estudiantes
             </a>
-            <a href="#docentes" class="bg-[#16c6ed] hover:bg-cyan-400 text-slate-950 font-extrabold px-5 py-3 rounded-xl text-xs md:text-sm shadow-lg transition flex items-center gap-2">
-                👨‍‍🏫 Propuestas para Docentes
+            <a href="#propuestas" onclick="switchCategory('docentes')" class="bg-[#161f30] hover:bg-slate-800 text-slate-200 border border-slate-700 font-extrabold px-5 py-3 rounded-xl text-xs md:text-sm shadow-lg transition flex items-center gap-2">
+                👨‍🏫 Docentes
             </a>
-            <a href="Plan_v3.pdf" target="_blank" class="bg-[#161f30] hover:bg-slate-800 text-slate-200 font-bold px-5 py-3 rounded-xl text-xs md:text-sm border border-slate-700 transition flex items-center gap-2">
+            <a href="Plan_v3.pdf" target="_blank" class="bg-[#161f30] hover:bg-slate-800 text-slate-200 border border-slate-700 font-bold px-5 py-3 rounded-xl text-xs md:text-sm transition flex items-center gap-2">
                 <i class="fa-solid fa-file-pdf text-[#fb6023]"></i> Descargar Plan PDF
             </a>
         </div>
     </section>
 
-    <!-- Propuestas Estudiantes (4 Tarjetas - 4 Colores) -->
-    <section id="estudiantes" class="max-w-5xl mx-auto px-4 py-8">
-        <h2 class="text-center text-xs font-bold uppercase text-[#60ef65] tracking-widest mb-2">Comunidad Estudiantil</h2>
-        <h3 class="text-center text-2xl md:text-3xl font-extrabold text-white mb-8">Propuestas para Estudiantes</h3>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <!-- Verde (#60ef65) -->
-            <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800 hover:border-[#60ef65]/50 transition">
-                <div class="text-[#60ef65] text-3xl mb-3"><i class="fa-solid fa-qrcode"></i></div>
-                <h4 class="text-base font-bold text-white mb-2">Portal Digital «Cero Filas»</h4>
-                <p class="text-slate-400 text-xs leading-relaxed">Emisión inmediata de constancias de estudio y kárdex con código QR desde tu celular, sin costos ni esperas en ventanilla.</p>
-            </div>
-
-            <!-- Amarillo (#f9c41a) -->
-            <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800 hover:border-[#f9c41a]/50 transition">
-                <div class="text-[#f9c41a] text-3xl mb-3"><i class="fa-solid fa-snowflake"></i></div>
-                <h4 class="text-base font-bold text-white mb-2">Aulas y Sanitarios Dignos</h4>
-                <p class="text-slate-400 text-xs leading-relaxed">Mantenimiento preventivo garantizado antes de olas de calor. Reparación de climas y mobiliario en menos de 24 horas.</p>
-            </div>
-
-            <!-- Naranja (#fb6023) -->
-            <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800 hover:border-[#fb6023]/50 transition">
-                <div class="text-[#fb6023] text-3xl mb-3"><i class="fa-solid fa-industry"></i></div>
-                <h4 class="text-base font-bold text-white mb-2">Campus Extramuros</h4>
-                <p class="text-slate-400 text-xs leading-relaxed">Prácticas directas en empresas líderes de la región con seguro facultativo, conectando con el entorno industrial real.</p>
-            </div>
-
-            <!-- Celeste (#16c6ed) -->
-            <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800 hover:border-[#16c6ed]/50 transition">
-                <div class="text-[#16c6ed] text-3xl mb-3"><i class="fa-solid fa-user-graduate"></i></div>
-                <h4 class="text-base font-bold text-white mb-2">Mentorías entre Pares</h4>
-                <p class="text-slate-400 text-xs leading-relaxed">Asesorías en ciencias básicas impartidas por alumnos destacados antes de exámenes, con beneficios en la cuota interna.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Propuestas Docentes (4 Tarjetas - 4 Colores) -->
-    <section id="docentes" class="max-w-5xl mx-auto px-4 py-8">
-        <h2 class="text-center text-xs font-bold uppercase text-[#16c6ed] tracking-widest mb-2">Cuerpo Académico</h2>
-        <h3 class="text-center text-2xl md:text-3xl font-extrabold text-white mb-8">Propuestas para Docentes</h3>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <!-- Verde (#60ef65) -->
-            <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800 hover:border-[#60ef65]/50 transition">
-                <div class="text-[#60ef65] text-3xl mb-3"><i class="fa-solid fa-calendar-check"></i></div>
-                <h4 class="text-base font-bold text-white mb-2">Asignación Transparente</h4>
-                <p class="text-slate-400 text-xs leading-relaxed">Proceso colegiado e imparcial para la asignación de cargas horarias según perfil académico, antigüedad y desempeño.</p>
-            </div>
-
-            <!-- Amarillo (#f9c41a) -->
-            <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800 hover:border-[#f9c41a]/50 transition">
-                <div class="text-[#f9c41a] text-3xl mb-3"><i class="fa-solid fa-chair"></i></div>
-                <h4 class="text-base font-bold text-white mb-2">Sala de Maestros Digna</h4>
-                <p class="text-slate-400 text-xs leading-relaxed">Modernización total del espacio docente con estaciones de trabajo equipadas, conectividad de alta velocidad y climatización constante.</p>
-            </div>
-
-            <!-- Naranja (#fb6023) -->
-            <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800 hover:border-[#fb6023]/50 transition">
-                <div class="text-[#fb6023] text-3xl mb-3"><i class="fa-solid fa-vial"></i></div>
-                <h4 class="text-base font-bold text-white mb-2">Plataforma SNII / PRODEP</h4>
-                <p class="text-slate-400 text-xs leading-relaxed">Creación de coloquios y comités editoriales locales para facilitar la producción científica y mantener distinciones académicas.</p>
-            </div>
-
-            <!-- Celeste (#16c6ed) -->
-            <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800 hover:border-[#16c6ed]/50 transition">
-                <div class="text-[#16c6ed] text-3xl mb-3"><i class="fa-solid fa-layer-group"></i></div>
-                <h4 class="text-base font-bold text-white mb-2">Laboratorios Híbridos</h4>
-                <p class="text-slate-400 text-xs leading-relaxed">Optimización e integración de espacios de laboratorio para impartir cátedras prácticas con insumos y equipos multifuncionales.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Propuestas por Carrera -->
-    <section class="max-w-5xl mx-auto px-4 py-12">
-        <div class="text-center mb-8">
-            <span class="text-xs font-bold text-[#60ef65] uppercase tracking-widest">Especialización Técnica</span>
-            <h3 class="text-2xl md:text-3xl font-extrabold text-white mt-1">Propuestas por Carrera</h3>
+    <!-- ÚNICA SECCIÓN DINÁMICA DE PROPUESTAS -->
+    <section id="propuestas" class="max-w-5xl mx-auto px-4 py-8">
+        <div class="text-center mb-6">
+            <h2 class="text-xs font-bold uppercase text-[#60ef65] tracking-widest mb-1">Ejes Estratégicos</h2>
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white">Propuestas de Trabajo</h3>
         </div>
 
-        <!-- Pestañas de Selección -->
-        <div class="flex flex-wrap justify-center gap-2 mb-6">
-            <button onclick="showCareer('sistemas')" id="btn-sistemas" class="tab-btn active-sistemas border px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
-                <i class="fa-solid fa-code text-[#60ef65]"></i> Sistemas (ISC)
+        <!-- Fila de Botones Pestaña (Mismo estilo que PDF, cambian al hacer clic) -->
+        <div class="flex flex-wrap justify-center gap-2.5 mb-8">
+            <button onclick="switchCategory('estudiantes')" id="tab-estudiantes" class="tab-btn active-estudiantes px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
+                🎓 Estudiantes
             </button>
-            <button onclick="showCareer('mecanica')" id="btn-mecanica" class="tab-btn border border-slate-800 text-slate-400 px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
-                <i class="fa-solid fa-gear text-[#f9c41a]"></i> Mecánica (IME)
+            <button onclick="switchCategory('docentes')" id="tab-docentes" class="tab-btn px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
+                👨‍🏫 Docentes
             </button>
-            <button onclick="showCareer('mecatroni')" id="btn-mecatroni" class="tab-btn border border-slate-800 text-slate-400 px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
-                <i class="fa-solid fa-robot text-[#fb6023]"></i> Mecatrónica (IMTC)
+            <button onclick="switchCategory('sistemas')" id="tab-sistemas" class="tab-btn px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
+                <i class="fa-solid fa-code"></i> ISC Sistemas
             </button>
-            <button onclick="showCareer('biomedica')" id="btn-biomedica" class="tab-btn border border-slate-800 text-slate-400 px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
-                <i class="fa-solid fa-wave-square text-[#16c6ed]"></i> Biomédica (IB)
+            <button onclick="switchCategory('mecanica')" id="tab-mecanica" class="tab-btn px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
+                <i class="fa-solid fa-gear"></i> IME Mecánica
+            </button>
+            <button onclick="switchCategory('mecatroni')" id="tab-mecatroni" class="tab-btn px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
+                <i class="fa-solid fa-robot"></i> IMTC Mecatrónica
+            </button>
+            <button onclick="switchCategory('biomedica')" id="tab-biomedica" class="tab-btn px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
+                <i class="fa-solid fa-wave-square"></i> IB Biomédica
             </button>
         </div>
 
-        <!-- Contenido dinámico por carrera -->
-        <div class="bg-[#161f30] p-6 md:p-8 rounded-2xl border border-slate-800">
-            <!-- Sistemas -->
-            <div id="content-sistemas" class="career-content space-y-4">
-                <div class="flex items-center gap-3 text-[#60ef65]">
-                    <i class="fa-solid fa-code text-2xl"></i>
-                    <h4 class="text-xl font-bold">Ingeniería en Sistemas Computacionales</h4>
-                </div>
-                <ul class="space-y-3 text-slate-300 text-sm">
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#60ef65] mt-1"></i> <span><strong>Desarrollo Interno:</strong> Creación y mantenimiento del Portal Cero Filas en servidores locales de la Facultad.</span></li>
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#60ef65] mt-1"></i> <span><strong>Redes y Ciberseguridad:</strong> Acceso y certificación en Cisco Networking Academy (CCNA/CCST).</span></li>
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#60ef65] mt-1"></i> <span><strong>Reacreditación CACEI:</strong> Blindaje formal del valor nacional e internacional de tu título.</span></li>
-                </ul>
-            </div>
-
-            <!-- Mecánica -->
-            <div id="content-mecanica" class="career-content hidden space-y-4">
-                <div class="flex items-center gap-3 text-[#f9c41a]">
-                    <i class="fa-solid fa-gear text-2xl"></i>
-                    <h4 class="text-xl font-bold">Ingeniería Mecánica Electricista</h4>
-                </div>
-                <ul class="space-y-3 text-slate-300 text-sm">
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#f9c41a] mt-1"></i> <span><strong>Campus Industrial Extramuros:</strong> Prácticas directas en plantas de la región con cobertura IMSS.</span></li>
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#f9c41a] mt-1"></i> <span><strong>Certificación SolidWorks:</strong> Convenios para certificaciones CSWA/CSWP en diseño y simulación.</span></li>
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#f9c41a] mt-1"></i> <span><strong>Laboratorios Híbridos:</strong> Estaciones modulares para manufactura y mantenimiento industrial.</span></li>
-                </ul>
-            </div>
-
-            <!-- Mecatrónica -->
-            <div id="content-mecatroni" class="career-content hidden space-y-4">
-                <div class="flex items-center gap-3 text-[#fb6023]">
-                    <i class="fa-solid fa-robot text-2xl"></i>
-                    <h4 class="text-xl font-bold">Ingeniería en Mecatrónica</h4>
-                </div>
-                <ul class="space-y-3 text-slate-300 text-sm">
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#fb6023] mt-1"></i> <span><strong>Primera Acreditación CIEES:</strong> Evaluación formal al egreso de la 1ª generación para garantizar tu título.</span></li>
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#fb6023] mt-1"></i> <span><strong>Automatización y Control:</strong> Certificaciones en programación de PLCs y brazos robóticos industriales.</span></li>
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#fb6023] mt-1"></i> <span><strong>Módulos Integradores:</strong> Mesas de trabajo equipadas con osciloscopios, fuentes y módulos de neumática.</span></li>
-                </ul>
-            </div>
-
-            <!-- Biomédica -->
-            <div id="content-biomedica" class="career-content hidden space-y-4">
-                <div class="flex items-center gap-3 text-[#16c6ed]">
-                    <i class="fa-solid fa-wave-square text-2xl"></i>
-                    <h4 class="text-xl font-bold">Ingeniería Biomédica</h4>
-                </div>
-                <ul class="space-y-3 text-slate-300 text-sm">
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#16c6ed] mt-1"></i> <span><strong>Modelo Dual Hospitalario:</strong> Convenios con IMSS, ISSSTE y clínicas privadas para estancias en piso real.</span></li>
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#16c6ed] mt-1"></i> <span><strong>Certificaciones en Bioseguridad:</strong> Alianzas con la plataforma OPS/OMS y metrología clínica.</span></li>
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#16c6ed] mt-1"></i> <span><strong>Reacreditación de Calidad:</strong> Respaldo de acreditación académica nacional para la carrera.</span></li>
-                </ul>
-            </div>
+        <!-- Contenedor Único de Tarjetas Dinámicas -->
+        <div id="content-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- El contenido se inyecta por JS para evitar duplicación de filas -->
         </div>
     </section>
 
@@ -273,20 +169,75 @@
         <p>© 2026 Campaña «Con Rola, la FIME Jala» — FIME UAdeC Unidad Norte</p>
     </footer>
 
-    <!-- Script Interactivo para cambiar pestañas -->
+    <!-- Script para cambiar contenido y estados activos -->
     <script>
-        function showCareer(career) {
-            document.querySelectorAll('.career-content').forEach(el => el.classList.add('hidden'));
-            
-            document.querySelectorAll('.tab-btn').forEach(el => {
-                el.className = "tab-btn border border-slate-800 text-slate-400 px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2";
+        const data = {
+            estudiantes: [
+                { icon: 'fa-qrcode', color: '#60ef65', title: 'Portal «Cero Filas»', text: 'Emisión inmediata de constancias y kárdex con validación QR desde el celular.' },
+                { icon: 'fa-snowflake', color: '#f9c41a', title: 'Aulas y Climatisación', text: 'Mantenimiento preventivo garantizado y reparación de climas en menos de 24 horas.' },
+                { icon: 'fa-industry', color: '#fb6023', title: 'Campus Extramuros', text: 'Prácticas directas en empresas regionales con cobertura de Seguro Facultativo.' },
+                { icon: 'fa-user-graduate', color: '#16c6ed', title: 'Mentoría entre Pares', text: 'Asesorías preparatorias de ciencias básicas con estímulo en cuota interna.' }
+            ],
+            docentes: [
+                { icon: 'fa-calendar-check', color: '#60ef65', title: 'Asignación Transparente', text: 'Proceso colegiado para asignación de cargas por perfil, antigüedad y desempeño.' },
+                { icon: 'fa-chair', color: '#f9c41a', title: 'Sala de Maestros Digna', text: 'Espacio renovado con alta conectividad, estaciones de trabajo y climatización.' },
+                { icon: 'fa-vial', color: '#fb6023', title: 'Plataforma SNII / PRODEP', text: 'Coloquios y comités locales para facilitar la producción científica y distinciones.' },
+                { icon: 'fa-layer-group', color: '#16c6ed', title: 'Laboratorios Híbridos', text: 'Optimización de áreas para impartir prácticas multifuncionales bien equipadas.' }
+            ],
+            sistemas: [
+                { icon: 'fa-code', color: '#60ef65', title: 'Desarrollo Cero Filas', text: 'Creación e implementación del portal digital por la misma comunidad de Sistemas.' },
+                { icon: 'fa-network-wired', color: '#60ef65', title: 'Cisco Academy', text: 'Acceso a certificaciones CCNA/CCST e infraestructura de redes actualizada.' },
+                { icon: 'fa-shield-halved', color: '#60ef65', title: 'Ciberseguridad', text: 'Talleres especializados en seguridad de la información y servidores.' },
+                { icon: 'fa-certificate', color: '#60ef65', title: 'Acreditación CACEI', text: 'Respaldo del reconocimiento de calidad nacional de la carrera.' }
+            ],
+            mecanica: [
+                { icon: 'fa-industry', color: '#f9c41a', title: 'Inmersión Industrial', text: 'Convenios directos con empresas metalmecánicas de la Región Centro.' },
+                { icon: 'fa-cube', color: '#f9c41a', title: 'Certificación SolidWorks', text: 'Facilidades para acreditaciones CSWA/CSWP en diseño tridimensional.' },
+                { icon: 'fa-wrench', color: '#f9c41a', title: 'Mantenimiento Industrial', text: 'Prácticas reales en herramental y diagnóstico de maquinaria.' },
+                { icon: 'fa-microscope', color: '#f9c41a', title: 'Pruebas de Materiales', text: 'Reequipamiento de laboratorios de manufactura y pruebas físicas.' }
+            ],
+            mecatroni: [
+                { icon: 'fa-robot', color: '#fb6023', title: 'Acreditación CIEES', text: 'Evaluación formal al egreso de la 1ª generación para validez del título.' },
+                { icon: 'fa-bolt', color: '#fb6023', title: 'Programación de PLCs', text: 'Módulos prácticos de automatización y robótica industrial.' },
+                { icon: 'fa-microchip', color: '#fb6023', title: 'Bancos de Electrónica', text: 'Estaciones equipadas con osciloscopios, fuentes e insumos completos.' },
+                { icon: 'fa-gears', color: '#fb6023', title: 'Sistemas Neumáticos', text: 'Laboratorio integrado para control electromecánico.' }
+            ],
+            biomedica: [
+                { icon: 'fa-hospital', color: '#16c6ed', title: 'Modelo Dual Hospitalario', text: 'Estancias en piso real en convenios con IMSS, ISSSTE y sector privado.' },
+                { icon: 'fa-heart-pulse', color: '#16c6ed', title: 'Metrología Médica', text: 'Capacitación en calibración y mantenimiento de equipo electromédico.' },
+                { icon: 'fa-file-shield', color: '#16c6ed', title: 'Bioseguridad OPS/OMS', text: 'Acceso a certificaciones internacionales en entornos clínicos.' },
+                { icon: 'fa-award', color: '#16c6ed', title: 'Calidad Académica', text: 'Consolidación del plan de estudios con validez oficial garantizada.' }
+            ]
+        };
+
+        function switchCategory(category) {
+            // Actualizar botones
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.className = "tab-btn px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2";
             });
+            
+            const activeBtn = document.getElementById('tab-' + category);
+            if (activeBtn) {
+                activeBtn.classList.add('active-' + category);
+            }
 
-            document.getElementById('content-' + career).classList.remove('hidden');
-
-            const btn = document.getElementById('btn-' + career);
-            btn.classList.add('active-' + career);
+            // Renderizar tarjetas en la vista única
+            const container = document.getElementById('content-container');
+            const items = data[category] || [];
+            
+            container.innerHTML = items.map(item => `
+                <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800 hover:border-[${item.color}]/50 transition">
+                    <div style="color: ${item.color}" class="text-3xl mb-3">
+                        <i class="fa-solid ${item.icon}"></i>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-2">${item.title}</h4>
+                    <p class="text-slate-400 text-xs leading-relaxed">${item.text}</p>
+                </div>
+            `).join('');
         }
+
+        // Carga inicial
+        switchCategory('estudiantes');
     </script>
 </body>
 </html>
