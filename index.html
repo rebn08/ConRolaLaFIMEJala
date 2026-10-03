@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Con Rola, La FIME Jala</title>
+    <title>Con Rola, la FIME Jala | Plan de Trabajo 2026-2029</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
                     colors: {
                         brand: {
                             verde: '#60ef65',
@@ -27,7 +34,11 @@
         }
     </script>
     <style>
-        body { background-color: #0d131f; color: #f8fafc; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: #0d131f; 
+            color: #f8fafc; 
+        }
         
         /* Estilos dinámicos para los botones por carrera */
         .tab-btn.active-sistemas { border-color: #60ef65; color: #60ef65; background-color: rgba(96, 239, 101, 0.12); }
@@ -59,7 +70,7 @@
         </div>
 
         <div class="inline-flex items-center gap-2 bg-slate-800/80 border border-slate-700 text-slate-300 text-xs px-3.5 py-1.5 rounded-full mb-4">
-            <span class="w-2 h-2 rounded-full bg-[#60ef65] animate-pulse"></span> Plan de Trabajo Institucional 2026-2029
+            <span class="w-2 h-2 rounded-full bg-[#60ef65] animate-pulse"></span> Plan de Trabajo Institucional 2026-2029[cite: 28]
         </div>
 
         <h1 class="text-4xl md:text-6xl font-black text-white tracking-tight mb-3">
@@ -67,7 +78,7 @@
         </h1>
 
         <p class="text-slate-300 text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-8">
-            Un modelo enfocado en la vida diaria del alumno: Climatización garantizada, trámites digitales inmediatos desde tu celular y prácticas en laboratorios e industria real.
+            Un modelo enfocado en la vida diaria del alumno: Climatización garantizada, trámites digitales inmediatos desde tu celular y prácticas en laboratorios e industria real[cite: 28].
         </p>
 
         <!-- Botones de Acción principales -->
@@ -91,26 +102,26 @@
             <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800">
                 <div class="text-[#f9c41a] text-3xl mb-3"><i class="fa-solid fa-snowflake"></i></div>
                 <h4 class="text-lg font-bold text-white mb-1">Climas y Sanitarios Dignos</h4>
-                <p class="text-slate-400 text-xs leading-relaxed">Mantenimiento preventivo programado antes de las olas de calor. Reparación y reposición en menos de 24 horas.</p>
+                <p class="text-slate-400 text-xs leading-relaxed">Mantenimiento preventivo programado antes de las olas de calor[cite: 28]. Reparación y reposición en menos de 24 horas.</p>
             </div>
 
             <!-- Tarjeta 2 -->
             <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800">
                 <div class="text-[#60ef65] text-3xl mb-3"><i class="fa-solid fa-qrcode"></i></div>
                 <h4 class="text-lg font-bold text-white mb-1">Portal Digital «Cero Filas»</h4>
-                <p class="text-slate-400 text-xs leading-relaxed">Descarga constancias de estudio y kárdex con firma y QR directamente en tu celular, sin costo ni esperas en ventanilla.</p>
+                <p class="text-slate-400 text-xs leading-relaxed">Descarga constancias de estudio y kárdex con firma y QR directamente en tu celular, sin costo ni esperas en ventanilla[cite: 28].</p>
             </div>
 
             <!-- Tarjeta 3 -->
             <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800">
                 <div class="text-[#16c6ed] text-3xl mb-3"><i class="fa-solid fa-user-graduate"></i></div>
                 <h4 class="text-lg font-bold text-white mb-1">Mentoría entre Pares</h4>
-                <p class="text-slate-400 text-xs leading-relaxed">Asesorías antes de tus exámenes en Cálculo, Física y Programación impartidas por alumnos destacados con descuento en cuota interna.</p>
+                <p class="text-slate-400 text-xs leading-relaxed">Asesorías antes de tus exámenes en Cálculo, Física y Programación impartidas por alumnos destacados con descuento en cuota interna[cite: 28].</p>
             </div>
         </div>
     </section>
 
-    <!-- Propuestas por Carrera con los colores HEX de sus logos -->
+    <!-- Propuestas por Carrera -->
     <section class="max-w-5xl mx-auto px-4 py-12">
         <div class="text-center mb-8">
             <span class="text-xs font-bold text-[#60ef65] uppercase tracking-widest">Especialización Técnica</span>
@@ -126,7 +137,7 @@
                 <i class="fa-solid fa-gear text-[#f9c41a]"></i> Mecánica (IME)
             </button>
             <button onclick="showCareer('mecatroni')" id="btn-mecatroni" class="tab-btn border border-slate-800 text-slate-400 px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
-                <i class="fa-solid fa-robot text-[#fb6023]"></i> Electrónica y Mecatrónica (IMTC)
+                <i class="fa-solid fa-robot text-[#fb6023]"></i> Mecatrónica (IMTC)
             </button>
             <button onclick="showCareer('biomedica')" id="btn-biomedica" class="tab-btn border border-slate-800 text-slate-400 px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
                 <i class="fa-solid fa-wave-square text-[#16c6ed]"></i> Biomédica (IB)
@@ -135,55 +146,55 @@
 
         <!-- Contenido dinámico por carrera -->
         <div class="bg-[#161f30] p-6 md:p-8 rounded-2xl border border-slate-800">
-            <!-- Sistemas (Verde #60ef65) -->
+            <!-- Sistemas -->
             <div id="content-sistemas" class="career-content space-y-4">
                 <div class="flex items-center gap-3 text-[#60ef65]">
                     <i class="fa-solid fa-code text-2xl"></i>
                     <h4 class="text-xl font-bold">Ingeniería en Sistemas Computacionales</h4>
                 </div>
                 <ul class="space-y-3 text-slate-300 text-sm">
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#60ef65] mt-1"></i> <span><strong>Desarrollo Interno:</strong> Creación y mantenimiento del Portal Cero Filas en servidores locales de la Facultad.</span></li>
+                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#60ef65] mt-1"></i> <span><strong>Desarrollo Interno:</strong> Creación y mantenimiento del Portal Cero Filas en servidores locales de la Facultad[cite: 28].</span></li>
                     <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#60ef65] mt-1"></i> <span><strong>Redes y Ciberseguridad:</strong> Acceso y certificación en Cisco Networking Academy (CCNA/CCST).</span></li>
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#60ef65] mt-1"></i> <span><strong>Reacreditación CACEI:</strong> Blindaje formal del valor nacional e internacional de tu título.</span></li>
+                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#60ef65] mt-1"></i> <span><strong>Reacreditación CACEI:</strong> Blindaje formal del valor nacional e internacional de tu título[cite: 28].</span></li>
                 </ul>
             </div>
 
-            <!-- Mecánica (Amarillo #f9c41a) -->
+            <!-- Mecánica -->
             <div id="content-mecanica" class="career-content hidden space-y-4">
                 <div class="flex items-center gap-3 text-[#f9c41a]">
                     <i class="fa-solid fa-gear text-2xl"></i>
                     <h4 class="text-xl font-bold">Ingeniería Mecánica Electricista</h4>
                 </div>
                 <ul class="space-y-3 text-slate-300 text-sm">
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#f9c41a] mt-1"></i> <span><strong>Campus Industrial Extramuros:</strong> Prácticas directas en plantas (Greenbrier, Trinity, Ironcast) con cobertura IMSS.</span></li>
+                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#f9c41a] mt-1"></i> <span><strong>Campus Industrial Extramuros:</strong> Prácticas directas en plantas de la región con cobertura IMSS[cite: 28].</span></li>
                     <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#f9c41a] mt-1"></i> <span><strong>Certificación SolidWorks:</strong> Convenios para certificaciones CSWA/CSWP en diseño y simulación.</span></li>
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#f9c41a] mt-1"></i> <span><strong>Laboratorios Híbridos:</strong> Estaciones modulares para manufactura y mantenimiento industrial en planta.</span></li>
+                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#f9c41a] mt-1"></i> <span><strong>Laboratorios Híbridos:</strong> Estaciones modulares para manufactura y mantenimiento industrial[cite: 28].</span></li>
                 </ul>
             </div>
 
-            <!-- Mecatrónica (Naranja #fb6023) -->
+            <!-- Mecatrónica -->
             <div id="content-mecatroni" class="career-content hidden space-y-4">
                 <div class="flex items-center gap-3 text-[#fb6023]">
                     <i class="fa-solid fa-robot text-2xl"></i>
                     <h4 class="text-xl font-bold">Ingeniería en Mecatrónica</h4>
                 </div>
                 <ul class="space-y-3 text-slate-300 text-sm">
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#fb6023] mt-1"></i> <span><strong>Primera Acreditación CIEES:</strong> Evaluación formal al egreso de la 1ª generación para garantizar tu título.</span></li>
+                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#fb6023] mt-1"></i> <span><strong>Primera Acreditación CIEES:</strong> Evaluación formal al egreso de la 1ª generación para garantizar tu título[cite: 28].</span></li>
                     <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#fb6023] mt-1"></i> <span><strong>Automatización y Control:</strong> Certificaciones en programación de PLCs y brazos robóticos industriales.</span></li>
                     <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#fb6023] mt-1"></i> <span><strong>Módulos Integradores:</strong> Mesas de trabajo equipadas con osciloscopios, fuentes y módulos de neumática.</span></li>
                 </ul>
             </div>
 
-            <!-- Biomédica (Celeste #16c6ed) -->
+            <!-- Biomédica -->
             <div id="content-biomedica" class="career-content hidden space-y-4">
                 <div class="flex items-center gap-3 text-[#16c6ed]">
                     <i class="fa-solid fa-wave-square text-2xl"></i>
                     <h4 class="text-xl font-bold">Ingeniería Biomédica</h4>
                 </div>
                 <ul class="space-y-3 text-slate-300 text-sm">
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#16c6ed] mt-1"></i> <span><strong>Modelo Dual Hospitalario:</strong> Convenios con IMSS, ISSSTE y clínicas privadas para estancias en piso real.</span></li>
+                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#16c6ed] mt-1"></i> <span><strong>Modelo Dual Hospitalario:</strong> Convenios con IMSS, ISSSTE y clínicas privadas para estancias en piso real[cite: 28].</span></li>
                     <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#16c6ed] mt-1"></i> <span><strong>Certificaciones en Bioseguridad:</strong> Alianzas con la plataforma OPS/OMS y metrología clínica.</span></li>
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#16c6ed] mt-1"></i> <span><strong>Reacreditación de Calidad:</strong> Respaldo de acreditación académica nacional para la carrera.</span></li>
+                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#16c6ed] mt-1"></i> <span><strong>Reacreditación de Calidad:</strong> Respaldo de acreditación académica nacional para la carrera[cite: 28].</span></li>
                 </ul>
             </div>
         </div>
@@ -199,7 +210,7 @@
                 <span class="text-xs font-bold text-[#16c6ed] uppercase tracking-widest">Candidato a la Dirección</span>
                 <h3 class="text-2xl font-bold text-white">Perfil y Trayectoria del Candidato</h3>
                 <p class="text-slate-300 text-xs md:text-sm leading-relaxed">
-                    Docente e investigador comprometido con la FIME Unidad Norte. Propongo un modelo de gestión transparente, cercano y con resultados reales para alumnos y docentes.
+                    Docente e investigador comprometido con la FIME Unidad Norte[cite: 28]. Propongo un modelo de gestión transparente, cercano y con resultados reales para alumnos y docentes[cite: 28].
                 </p>
                 <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-3">
                     <a href="CV_Candidato.pdf" target="_blank" class="bg-[#16c6ed] hover:bg-cyan-400 text-slate-950 font-black px-5 py-2 rounded-lg text-xs transition">
@@ -212,24 +223,20 @@
 
     <!-- Footer -->
     <footer class="text-center py-6 text-xs text-slate-500 border-t border-slate-900">
-        <p>© 2026 Campaña «Con Rola, la FIME Jala» — FIME UAdeC Unidad Norte</p>
+        <p>© 2026 Campaña «Con Rola, la FIME Jala» — FIME UAdeC Unidad Norte[cite: 28]</p>
     </footer>
 
     <!-- Script Interactivo para cambiar pestañas -->
     <script>
         function showCareer(career) {
-            // Ocultar todos los contenidos
             document.querySelectorAll('.career-content').forEach(el => el.classList.add('hidden'));
             
-            // Limpiar clases activas
             document.querySelectorAll('.tab-btn').forEach(el => {
                 el.className = "tab-btn border border-slate-800 text-slate-400 px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2";
             });
 
-            // Mostrar el elemento seleccionado
             document.getElementById('content-' + career).classList.remove('hidden');
 
-            // Activar botón seleccionado
             const btn = document.getElementById('btn-' + career);
             btn.classList.add('active-' + career);
         }
