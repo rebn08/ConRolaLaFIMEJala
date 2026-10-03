@@ -41,7 +41,7 @@
             color: #f8fafc; 
         }
 
-        /* Estilo base inactivo */
+        /* Estilo base inactivo para las pestañas */
         .tab-btn {
             background-color: #161f30;
             color: #e2e8f0;
@@ -51,13 +51,12 @@
             background-color: #1e293b;
         }
 
-        /* Colores dinámicos al activarse */
-        .tab-btn.active-estudiantes { background-color: #60ef65; color: #020617; border-color: #60ef65; }
-        .tab-btn.active-docentes    { background-color: #16c6ed; color: #020617; border-color: #16c6ed; }
-        .tab-btn.active-sistemas    { background-color: #60ef65; color: #020617; border-color: #60ef65; }
-        .tab-btn.active-mecanica    { background-color: #f9c41a; color: #020617; border-color: #f9c41a; }
-        .tab-btn.active-mecatroni   { background-color: #fb6023; color: #020617; border-color: #fb6023; }
-        .tab-btn.active-biomedica   { background-color: #16c6ed; color: #020617; border-color: #16c6ed; }
+        /* Colores temáticos al activarse */
+        .tab-btn.active-eje1 { background-color: #60ef65; color: #020617; border-color: #60ef65; }
+        .tab-btn.active-eje2 { background-color: #f9c41a; color: #020617; border-color: #f9c41a; }
+        .tab-btn.active-eje3 { background-color: #16c6ed; color: #020617; border-color: #16c6ed; }
+        .tab-btn.active-eje4 { background-color: #fb6023; color: #020617; border-color: #fb6023; }
+        .tab-btn.active-eje5 { background-color: #60ef65; color: #020617; border-color: #60ef65; }
     </style>
 </head>
 <body class="font-sans antialiased selection:bg-[#16c6ed] selection:text-slate-900">
@@ -77,7 +76,6 @@
 
     <!-- Hero Section -->
     <section class="px-4 py-10 md:py-16 text-center max-w-4xl mx-auto">
-        <!-- Avatar Icon SVG -->
         <div class="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 flex items-center justify-center bg-[#161f30] rounded-full border-2 border-[#16c6ed] shadow-xl shadow-[#16c6ed]/10">
             <i class="fa-solid fa-user-gear text-5xl md:text-6xl text-[#16c6ed]"></i>
         </div>
@@ -95,32 +93,29 @@
         </p>
     </section>
 
-    <!-- ÚNICA SECCIÓN DINÁMICA DE PROPUESTAS -->
+    <!-- SECCIÓN DINÁMICA DE LOS 5 EJES ESTRATÉGICOS -->
     <section id="propuestas" class="max-w-5xl mx-auto px-4 py-8">
         <div class="text-center mb-6">
-            <h2 class="text-xs font-bold uppercase text-[#60ef65] tracking-widest mb-1">Ejes Estratégicos</h2>
-            <h3 class="text-2xl md:text-3xl font-extrabold text-white">Propuestas de Trabajo</h3>
+            <h2 class="text-xs font-bold uppercase text-[#60ef65] tracking-widest mb-1">Prioridades de Gestión</h2>
+            <h3 class="text-2xl md:text-3xl font-extrabold text-white">5 Ejes Estratégicos de Acción</h3>
         </div>
 
-        <!-- Fila de Botones Pestaña -->
+        <!-- Fila de los 5 Botones de Ejes -->
         <div class="flex flex-wrap justify-center gap-2.5 mb-8">
-            <button onclick="switchCategory('estudiantes')" id="tab-estudiantes" class="tab-btn active-estudiantes px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
-                🎓 Estudiantes
+            <button onclick="switchCategory('eje1')" id="tab-eje1" class="tab-btn active-eje1 px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
+                <i class="fa-solid fa-graduation-cap"></i> Eje 1: Excelencia y Acreditación
             </button>
-            <button onclick="switchCategory('docentes')" id="tab-docentes" class="tab-btn px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
-                👨‍🏫 Docentes
+            <button onclick="switchCategory('eje2')" id="tab-eje2" class="tab-btn px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
+                <i class="fa-solid fa-snowflake"></i> Eje 2: Infraestructura y Climas
             </button>
-            <button onclick="switchCategory('sistemas')" id="tab-sistemas" class="tab-btn px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
-                <i class="fa-solid fa-code"></i> ISC Sistemas
+            <button onclick="switchCategory('eje3')" id="tab-eje3" class="tab-btn px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
+                <i class="fa-solid fa-user-tie"></i> Eje 3: Dignificación Docente
             </button>
-            <button onclick="switchCategory('mecanica')" id="tab-mecanica" class="tab-btn px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
-                <i class="fa-solid fa-gear"></i> IME Mecánica
+            <button onclick="switchCategory('eje4')" id="tab-eje4" class="tab-btn px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
+                <i class="fa-solid fa-industry"></i> Eje 4: Vinculación Industrial
             </button>
-            <button onclick="switchCategory('mecatroni')" id="tab-mecatroni" class="tab-btn px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
-                <i class="fa-solid fa-robot"></i> IMTC Mecatrónica
-            </button>
-            <button onclick="switchCategory('biomedica')" id="tab-biomedica" class="tab-btn px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
-                <i class="fa-solid fa-wave-square"></i> IB Biomédica
+            <button onclick="switchCategory('eje5')" id="tab-eje5" class="tab-btn px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
+                <i class="fa-solid fa-qrcode"></i> Eje 5: Gestión Digital y Comunidad
             </button>
         </div>
 
@@ -166,44 +161,38 @@
         <p>© 2026 Campaña «Con Rola, la FIME Jala» — FIME UAdeC Unidad Norte</p>
     </footer>
 
-    <!-- Script para cambiar contenido y estados activos -->
+    <!-- Script de control interactivo por Eje Estratégico -->
     <script>
         const data = {
-            estudiantes: [
-                { icon: 'fa-qrcode', color: '#60ef65', title: 'Portal «Cero Filas»', text: 'Emisión inmediata de constancias y kárdex con validación QR desde el celular.' },
-                { icon: 'fa-snowflake', color: '#f9c41a', title: 'Aulas y Climatisación', text: 'Mantenimiento preventivo garantizado y reparación de climas en menos de 24 horas.' },
-                { icon: 'fa-industry', color: '#fb6023', title: 'Campus Extramuros', text: 'Prácticas directas en empresas regionales con cobertura de Seguro Facultativo.' },
-                { icon: 'fa-user-graduate', color: '#16c6ed', title: 'Mentoría entre Pares', text: 'Asesorías preparatorias de ciencias básicas con estímulo en cuota interna.' }
+            eje1: [
+                { icon: 'fa-user-graduate', color: '#60ef65', title: 'Mentoría entre Pares', text: 'Talleres de refuerzo en Ciencias Básicas impartidos por alumnos destacados antes de parciales.' },
+                { icon: 'fa-calendar-days', color: '#60ef65', title: 'Cursos de Verano', text: 'Publicación anticipada de materias críticas para evitar rezagos de semestres.' },
+                { icon: 'fa-award', color: '#60ef65', title: 'Acreditación de las 4 Carreras', text: 'Evaluación CIEES para Mecatrónica y reacreditación CACEI/CIEES para Sistemas, Mecánica y Biomédica.' },
+                { icon: 'fa-clock', color: '#60ef65', title: 'Regularización Sabatina', text: 'Apertura de materias sabatinas autofinanciables para avanzar sin esperar al verano.' }
             ],
-            docentes: [
-                { icon: 'fa-calendar-check', color: '#60ef65', title: 'Asignación Transparente', text: 'Proceso colegiado para asignación de cargas por perfil, antigüedad y desempeño.' },
-                { icon: 'fa-chair', color: '#f9c41a', title: 'Sala de Maestros Digna', text: 'Espacio renovado con alta conectividad, estaciones de trabajo y climatización.' },
-                { icon: 'fa-vial', color: '#fb6023', title: 'Plataforma SNII / PRODEP', text: 'Coloquios y comités locales para facilitar la producción científica y distinciones.' },
-                { icon: 'fa-layer-group', color: '#16c6ed', title: 'Laboratorios Híbridos', text: 'Optimización de áreas para impartir prácticas multifuncionales bien equipadas.' }
+            eje2: [
+                { icon: 'fa-snowflake', color: '#f9c41a', title: 'Climatización Preventiva', text: 'Mantenimiento de minisplits antes de olas de calor con reparación en menos de 24 hrs.' },
+                { icon: 'fa-flask-vial', color: '#f9c41a', title: 'Laboratorios Híbridos', text: 'Estaciones modulares de trabajo multidisciplinario con equipo funcional continuo.' },
+                { icon: 'fa-shield-halved', color: '#f9c41a', title: 'Seguridad y Acceso', text: 'Acceso automatizado, caseta funcional e iluminación LED en estacionamientos y paradas.' },
+                { icon: 'fa-laptop-code', color: '#f9c41a', title: 'Software e Infraestructura', text: 'Estandarización de licencias de ingeniería (SolidWorks, Python, CAD/CAM) y cómputo.' }
             ],
-            sistemas: [
-                { icon: 'fa-code', color: '#60ef65', title: 'Desarrollo Cero Filas', text: 'Creación e implementación del portal digital por la misma comunidad de Sistemas.' },
-                { icon: 'fa-network-wired', color: '#60ef65', title: 'Cisco Academy', text: 'Acceso a certificaciones CCNA/CCST e infraestructura de redes actualizada.' },
-                { icon: 'fa-shield-halved', color: '#60ef65', title: 'Ciberseguridad', text: 'Talleres especializados en seguridad de la información y servidores.' },
-                { icon: 'fa-certificate', color: '#60ef65', title: 'Acreditación CACEI', text: 'Respaldo del reconocimiento de calidad nacional de la carrera.' }
+            eje3: [
+                { icon: 'fa-calendar-check', color: '#16c6ed', title: 'Asignación Oportuna', text: 'Transparencia en cargas docentes por perfil y antigüedad semanas antes de iniciar clases.' },
+                { icon: 'fa-vial-circle-check', color: '#16c6ed', title: 'Respaldo SNII / PRODEP', text: 'Coloquio Anual FIME para divulgación científica y facilitación de tramites investigativos.' },
+                { icon: 'fa-graduation-cap', color: '#16c6ed', title: 'Posgrado Pertinente', text: 'Maestría profesionalizante orientada a automatización y manufactura en Monclova.' },
+                { icon: 'fa-chair', color: '#16c6ed', title: 'Sala de Maestros Digna', text: 'Espacio acondicionado con estaciones de trabajo, internet veloz y área de asesorías.' }
             ],
-            mecanica: [
-                { icon: 'fa-industry', color: '#f9c41a', title: 'Inmersión Industrial', text: 'Convenios directos con empresas metalmecánicas de la Región Centro.' },
-                { icon: 'fa-cube', color: '#f9c41a', title: 'Certificación SolidWorks', text: 'Facilidades para acreditaciones CSWA/CSWP en diseño tridimensional.' },
-                { icon: 'fa-wrench', color: '#f9c41a', title: 'Mantenimiento Industrial', text: 'Prácticas reales en herramental y diagnóstico de maquinaria.' },
-                { icon: 'fa-microscope', color: '#f9c41a', title: 'Pruebas de Materiales', text: 'Reequipamiento de laboratorios de manufactura y pruebas físicas.' }
+            eje4: [
+                { icon: 'fa-industry', color: '#fb6023', title: 'Campus Extramuros & Dual', text: 'Prácticas curriculares en plantas (Greenbrier, Trinity, Ironcast, sector salud) con Seguro IMSS.' },
+                { icon: 'fa-certificate', color: '#fb6023', title: 'Certificaciones Técnicas', text: 'Convenios preferenciales en SolidWorks, Six Sigma, PLCs, Cisco y OPS/OMS.' },
+                { icon: 'fa-briefcase', color: '#fb6023', title: 'Banco de Residencias', text: 'Vinculación con CANACINTRA y COPARMEX para proyectos reales con opción a contratación.' },
+                { icon: 'fa-lightbulb', color: '#fb6023', title: 'Asesoría a PYMES', text: 'Servicio social enfocado en consultoría técnica, automatización y digitalización local.' }
             ],
-            mecatroni: [
-                { icon: 'fa-robot', color: '#fb6023', title: 'Acreditación CIEES', text: 'Evaluación formal al egreso de la 1ª generación para validez del título.' },
-                { icon: 'fa-bolt', color: '#fb6023', title: 'Programación de PLCs', text: 'Módulos prácticos de automatización y robótica industrial.' },
-                { icon: 'fa-microchip', color: '#fb6023', title: 'Bancos de Electrónica', text: 'Estaciones equipadas con osciloscopios, fuentes e insumos completos.' },
-                { icon: 'fa-gears', color: '#fb6023', title: 'Sistemas Neumáticos', text: 'Laboratorio integrado para control electromecánico.' }
-            ],
-            biomedica: [
-                { icon: 'fa-hospital', color: '#16c6ed', title: 'Modelo Dual Hospitalario', text: 'Estancias en piso real en convenios con IMSS, ISSSTE y sector privado.' },
-                { icon: 'fa-heart-pulse', color: '#16c6ed', title: 'Metrología Médica', text: 'Capacitación en calibración y mantenimiento de equipo electromédico.' },
-                { icon: 'fa-file-shield', color: '#16c6ed', title: 'Bioseguridad OPS/OMS', text: 'Acceso a certificaciones internacionales en entornos clínicos.' },
-                { icon: 'fa-award', color: '#16c6ed', title: 'Calidad Académica', text: 'Consolidación del plan de estudios con validez oficial garantizada.' }
+            eje5: [
+                { icon: 'fa-qrcode', color: '#60ef65', title: 'Portal «Cero Filas»', text: 'Descarga inmediata de constancias y kárdex con código QR verificable desde el celular.' },
+                { icon: 'fa-bus', color: '#60ef65', title: 'Rutas Foráneas Seguras', text: 'Acuerdos intermunicipales para transporte, paradas iluminadas y tarifas preferenciales.' },
+                { icon: 'fa-comments', color: '#60ef65', title: 'Bitácora Digital y Foros', text: 'Encuentros semestrales de seguimiento a compromisos con transparencia pública.' },
+                { icon: 'fa-trophy', color: '#60ef65', title: 'Identidad, Deporte y Cultura', text: 'Torneos inter-carreras, impulso al voluntariado Lobos en Acción y Día FIME.' }
             ]
         };
 
@@ -218,7 +207,7 @@
                 activeBtn.classList.add('active-' + category);
             }
 
-            // Renderizar tarjetas
+            // Renderizar tarjetas dinámicamente
             const container = document.getElementById('content-container');
             const items = data[category] || [];
             
@@ -233,8 +222,8 @@
             `).join('');
         }
 
-        // Carga inicial
-        switchCategory('estudiantes');
+        // Carga inicial por defecto con el Eje 1
+        switchCategory('eje1');
     </script>
 </body>
 </html>
