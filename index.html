@@ -163,36 +163,42 @@
 
     <!-- Script de control interactivo por Eje Estratégico -->
     <script>
+        // Definición de colores principales
+        const C_VERDE = '#60ef65';
+        const C_AMARILLO = '#f9c41a';
+        const C_CELESTE = '#16c6ed';
+        const C_NARANJA = '#fb6023';
+
         const data = {
             eje1: [
-                { icon: 'fa-user-graduate', color: '#60ef65', title: 'Mentoría entre Pares', text: 'Talleres de refuerzo en Ciencias Básicas impartidos por alumnos destacados antes de parciales.' },
-                { icon: 'fa-calendar-days', color: '#60ef65', title: 'Cursos de Verano', text: 'Publicación anticipada de materias críticas para evitar rezagos de semestres.' },
-                { icon: 'fa-award', color: '#60ef65', title: 'Acreditación de las 4 Carreras', text: 'Evaluación CIEES para Mecatrónica y reacreditación CACEI/CIEES para Sistemas, Mecánica y Biomédica.' },
-                { icon: 'fa-clock', color: '#60ef65', title: 'Regularización Sabatina', text: 'Apertura de materias sabatinas autofinanciables para avanzar sin esperar al verano.' }
+                { icon: 'fa-user-graduate', color: C_VERDE, title: 'Mentoría entre Pares', text: 'Talleres de refuerzo en Ciencias Básicas impartidos por alumnos destacados antes de parciales.' },
+                { icon: 'fa-calendar-days', color: C_AMARILLO, title: 'Cursos de Verano', text: 'Publicación anticipada de materias críticas para evitar rezagos de semestres.' },
+                { icon: 'fa-award', color: C_CELESTE, title: 'Acreditación de las 4 Carreras', text: 'Evaluación CIEES para Mecatrónica y reacreditación CACEI/CIEES para Sistemas, Mecánica y Biomédica.' },
+                { icon: 'fa-clock', color: C_NARANJA, title: 'Regularización Sabatina', text: 'Apertura de materias sabatinas autofinanciables para avanzar sin esperar al verano.' }
             ],
             eje2: [
-                { icon: 'fa-snowflake', color: '#f9c41a', title: 'Climatización Preventiva', text: 'Mantenimiento de minisplits antes de olas de calor con reparación en menos de 24 hrs.' },
-                { icon: 'fa-flask-vial', color: '#f9c41a', title: 'Laboratorios Híbridos', text: 'Estaciones modulares de trabajo multidisciplinario con equipo funcional continuo.' },
-                { icon: 'fa-shield-halved', color: '#f9c41a', title: 'Seguridad y Acceso', text: 'Acceso automatizado, caseta funcional e iluminación LED en estacionamientos y paradas.' },
-                { icon: 'fa-laptop-code', color: '#f9c41a', title: 'Software e Infraestructura', text: 'Estandarización de licencias de ingeniería (SolidWorks, Python, CAD/CAM) y cómputo.' }
+                { icon: 'fa-snowflake', color: C_VERDE, title: 'Climatización Preventiva', text: 'Mantenimiento de minisplits antes de olas de calor con reparación en menos de 24 hrs.' },
+                { icon: 'fa-flask-vial', color: C_AMARILLO, title: 'Laboratorios Híbridos', text: 'Estaciones modulares de trabajo multidisciplinario con equipo funcional continuo.' },
+                { icon: 'fa-shield-halved', color: C_CELESTE, title: 'Seguridad y Acceso', text: 'Acceso automatizado, caseta funcional e iluminación LED en estacionamientos y paradas.' },
+                { icon: 'fa-laptop-code', color: C_NARANJA, title: 'Software e Infraestructura', text: 'Estandarización de licencias de ingeniería (SolidWorks, Python, CAD/CAM) y cómputo.' }
             ],
             eje3: [
-                { icon: 'fa-calendar-check', color: '#16c6ed', title: 'Asignación Oportuna', text: 'Transparencia en cargas docentes por perfil y antigüedad semanas antes de iniciar clases.' },
-                { icon: 'fa-vial-circle-check', color: '#16c6ed', title: 'Respaldo SNII / PRODEP', text: 'Coloquio Anual FIME para divulgación científica y facilitación de tramites investigativos.' },
-                { icon: 'fa-graduation-cap', color: '#16c6ed', title: 'Posgrado Pertinente', text: 'Maestría profesionalizante orientada a automatización y manufactura en Monclova.' },
-                { icon: 'fa-chair', color: '#16c6ed', title: 'Sala de Maestros Digna', text: 'Espacio acondicionado con estaciones de trabajo, internet veloz y área de asesorías.' }
+                { icon: 'fa-calendar-check', color: C_VERDE, title: 'Asignación Oportuna', text: 'Transparencia en cargas docentes por perfil y antigüedad semanas antes de iniciar clases.' },
+                { icon: 'fa-vial-circle-check', color: C_AMARILLO, title: 'Respaldo SNII / PRODEP', text: 'Coloquio Anual FIME para divulgación científica y facilitación de tramites investigativos.' },
+                { icon: 'fa-graduation-cap', color: C_CELESTE, title: 'Posgrado Pertinente', text: 'Maestría profesionalizante orientada a automatización y manufactura en Monclova.' },
+                { icon: 'fa-chair', color: C_NARANJA, title: 'Sala de Maestros Digna', text: 'Espacio acondicionado con estaciones de trabajo, internet veloz y área de asesorías.' }
             ],
             eje4: [
-                { icon: 'fa-industry', color: '#fb6023', title: 'Campus Extramuros & Dual', text: 'Prácticas curriculares en plantas (Greenbrier, Trinity, Ironcast, sector salud) con Seguro IMSS.' },
-                { icon: 'fa-certificate', color: '#fb6023', title: 'Certificaciones Técnicas', text: 'Convenios preferenciales en SolidWorks, Six Sigma, PLCs, Cisco y OPS/OMS.' },
-                { icon: 'fa-briefcase', color: '#fb6023', title: 'Banco de Residencias', text: 'Vinculación con CANACINTRA y COPARMEX para proyectos reales con opción a contratación.' },
-                { icon: 'fa-lightbulb', color: '#fb6023', title: 'Asesoría a PYMES', text: 'Servicio social enfocado en consultoría técnica, automatización y digitalización local.' }
+                { icon: 'fa-industry', color: C_VERDE, title: 'Campus Extramuros & Dual', text: 'Prácticas curriculares en plantas (Greenbrier, Trinity, Ironcast, sector salud) con Seguro IMSS.' },
+                { icon: 'fa-certificate', color: C_AMARILLO, title: 'Certificaciones Técnicas', text: 'Convenios preferenciales en SolidWorks, Six Sigma, PLCs, Cisco y OPS/OMS.' },
+                { icon: 'fa-briefcase', color: C_CELESTE, title: 'Banco de Residencias', text: 'Vinculación con CANACINTRA y COPARMEX para proyectos reales con opción a contratación.' },
+                { icon: 'fa-lightbulb', color: C_NARANJA, title: 'Asesoría a PYMES', text: 'Servicio social enfocado en consultoría técnica, automatización y digitalización local.' }
             ],
             eje5: [
-                { icon: 'fa-qrcode', color: '#60ef65', title: 'Portal «Cero Filas»', text: 'Descarga inmediata de constancias y kárdex con código QR verificable desde el celular.' },
-                { icon: 'fa-bus', color: '#60ef65', title: 'Rutas Foráneas Seguras', text: 'Acuerdos intermunicipales para transporte, paradas iluminadas y tarifas preferenciales.' },
-                { icon: 'fa-comments', color: '#60ef65', title: 'Bitácora Digital y Foros', text: 'Encuentros semestrales de seguimiento a compromisos con transparencia pública.' },
-                { icon: 'fa-trophy', color: '#60ef65', title: 'Identidad, Deporte y Cultura', text: 'Torneos inter-carreras, impulso al voluntariado Lobos en Acción y Día FIME.' }
+                { icon: 'fa-qrcode', color: C_VERDE, title: 'Portal «Cero Filas»', text: 'Descarga inmediata de constancias y kárdex con código QR verificable desde el celular.' },
+                { icon: 'fa-bus', color: C_AMARILLO, title: 'Rutas Foráneas Seguras', text: 'Acuerdos intermunicipales para transporte, paradas iluminadas y tarifas preferenciales.' },
+                { icon: 'fa-comments', color: C_CELESTE, title: 'Bitácora Digital y Foros', text: 'Encuentros semestrales de seguimiento a compromisos con transparencia pública.' },
+                { icon: 'fa-trophy', color: C_NARANJA, title: 'Identidad, Deporte y Cultura', text: 'Torneos inter-carreras, impulso al voluntariado Lobos en Acción y Día FIME.' }
             ]
         };
 
@@ -207,12 +213,12 @@
                 activeBtn.classList.add('active-' + category);
             }
 
-            // Renderizar tarjetas dinámicamente
+            // Renderizar tarjetas dinámicamente con su color de ícono respectivo
             const container = document.getElementById('content-container');
             const items = data[category] || [];
             
             container.innerHTML = items.map(item => `
-                <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800 hover:border-[${item.color}]/50 transition">
+                <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition">
                     <div style="color: ${item.color}" class="text-3xl mb-3">
                         <i class="fa-solid ${item.icon}"></i>
                     </div>
