@@ -82,8 +82,9 @@
             <i class="fa-solid fa-user-gear text-5xl md:text-6xl text-[#16c6ed]"></i>
         </div>
 
-        <div class="inline-flex items-center gap-2 bg-slate-800/80 border border-slate-700 text-slate-300 text-xs px-3.5 py-1.5 rounded-full mb-4">
-            <span class="w-2 h-2 rounded-full bg-[#60ef65] animate-pulse"></span> Plan de Trabajo Institucional 2026-2029
+        <!-- Pastilla / Badge Modificada -->
+        <div class="inline-flex items-center gap-2 bg-slate-800/80 border border-slate-700 text-slate-200 font-bold text-xs px-4 py-1.5 rounded-full mb-4 shadow-md uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-[#60ef65] animate-pulse"></span> Candidato a la Dirección 2026-2029
         </div>
 
         <h1 class="text-4xl md:text-6xl font-black text-white tracking-tight mb-3">
@@ -165,7 +166,6 @@
 
     <!-- Script de control interactivo por Eje Estratégico -->
     <script>
-        // Colores asignados a cada una de las 4 tarjetas por eje
         const C_VERDE = '#60ef65';
         const C_AMARILLO = '#f9c41a';
         const C_CELESTE = '#16c6ed';
@@ -205,18 +205,15 @@
         };
 
         function switchCategory(category) {
-            // Limpiar estado activo de todas las pestañas
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.className = "tab-btn px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2";
             });
             
-            // Asignar estado activo azul con letras blancas a la pestaña seleccionada
             const activeBtn = document.getElementById('tab-' + category);
             if (activeBtn) {
                 activeBtn.classList.add('active-tab');
             }
 
-            // Renderizar tarjetas dinámicamente con su color de ícono respectivo
             const container = document.getElementById('content-container');
             const items = data[category] || [];
             
@@ -231,7 +228,6 @@
             `).join('');
         }
 
-        // Carga inicial por defecto con el Eje 1
         switchCategory('eje1');
     </script>
 </body>
