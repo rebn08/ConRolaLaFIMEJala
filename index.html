@@ -40,7 +40,7 @@
             color: #f8fafc; 
         }
         
-        /* Estilos dinámicos para los botones por carrera */
+        /* Estilos dinámicos para los botones por pestaña */
         .tab-btn.active-sistemas { border-color: #60ef65; color: #60ef65; background-color: rgba(96, 239, 101, 0.12); }
         .tab-btn.active-mecanica { border-color: #f9c41a; color: #f9c41a; background-color: rgba(249, 196, 26, 0.12); }
         .tab-btn.active-mecatroni { border-color: #fb6023; color: #fb6023; background-color: rgba(251, 96, 35, 0.12); }
@@ -78,13 +78,13 @@
         </h1>
 
         <p class="text-slate-300 text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-8">
-            Un modelo enfocado en la vida diaria del alumno: Climatización garantizada, trámites digitales inmediatos desde tu celular y prácticas en laboratorios e industria real.
+            Un modelo enfocado en la vida diaria de alumnos y docentes: Climatización garantizada, certidumbre laboral, trámites digitales inmediatos y laboratorios de vanguardia.
         </p>
 
         <!-- Botones de Acción principales -->
         <div class="flex flex-wrap justify-center gap-3">
             <a href="#compromisos" class="bg-white text-slate-950 font-extrabold px-6 py-3 rounded-xl text-sm hover:bg-slate-200 transition shadow-lg">
-                🚀 Propuestas Estudiantiles
+                🚀 Propuestas Destacadas
             </a>
             <a href="Plan_v3.pdf" target="_blank" class="bg-[#161f30] hover:bg-slate-800 text-slate-200 font-bold px-6 py-3 rounded-xl text-sm border border-slate-700 transition flex items-center gap-2">
                 <i class="fa-solid fa-file-pdf text-[#fb6023]"></i> Descargar Plan PDF
@@ -92,31 +92,74 @@
         </div>
     </section>
 
-    <!-- Lo que Resolvemos HOY (Compromisos) -->
+    <!-- Propuestas Estudiantes (4 Tarjetas - 4 Colores) -->
     <section id="compromisos" class="max-w-5xl mx-auto px-4 py-8">
-        <h2 class="text-center text-xs font-bold uppercase text-[#16c6ed] tracking-widest mb-2">Respuesta Inmediata</h2>
-        <h3 class="text-center text-2xl md:text-3xl font-extrabold text-white mb-8">Lo que cambia en tu día a día</h3>
+        <h2 class="text-center text-xs font-bold uppercase text-[#60ef65] tracking-widest mb-2">Comunidad Estudiantil</h2>
+        <h3 class="text-center text-2xl md:text-3xl font-extrabold text-white mb-8">Propuestas para Estudiantes</h3>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <!-- Tarjeta 1 -->
-            <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800">
-                <div class="text-[#f9c41a] text-3xl mb-3"><i class="fa-solid fa-snowflake"></i></div>
-                <h4 class="text-lg font-bold text-white mb-1">Climas y Sanitarios Dignos</h4>
-                <p class="text-slate-400 text-xs leading-relaxed">Mantenimiento preventivo programado antes de las olas de calor[cite: 28]. Reparación y reposición en menos de 24 horas.</p>
-            </div>
-
-            <!-- Tarjeta 2 -->
-            <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- Verde (#60ef65) -->
+            <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800 hover:border-[#60ef65]/50 transition">
                 <div class="text-[#60ef65] text-3xl mb-3"><i class="fa-solid fa-qrcode"></i></div>
-                <h4 class="text-lg font-bold text-white mb-1">Portal Digital «Cero Filas»</h4>
-                <p class="text-slate-400 text-xs leading-relaxed">Descarga constancias de estudio y kárdex con firma y QR directamente en tu celular, sin costo ni esperas en ventanilla[cite: 28].</p>
+                <h4 class="text-base font-bold text-white mb-2">Portal Digital «Cero Filas»</h4>
+                <p class="text-slate-400 text-xs leading-relaxed">Emisión inmediata de constancias de estudio y kárdex con código QR desde tu celular, sin costos ni esperas en ventanilla.</p>
             </div>
 
-            <!-- Tarjeta 3 -->
-            <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800">
-                <div class="text-[#16c6ed] text-3xl mb-3"><i class="fa-solid fa-user-graduate"></i></div>
-                <h4 class="text-lg font-bold text-white mb-1">Mentoría entre Pares</h4>
-                <p class="text-slate-400 text-xs leading-relaxed">Asesorías antes de tus exámenes en Cálculo, Física y Programación impartidas por alumnos destacados con descuento en cuota interna[cite: 28].</p>
+            <!-- Amarillo (#f9c41a) -->
+            <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800 hover:border-[#f9c41a]/50 transition">
+                <div class="text-[#f9c41a] text-3xl mb-3"><i class="fa-solid fa-snowflake"></i></div>
+                <h4 class="text-base font-bold text-white mb-2">Aulas y Sanitarios Dignos</h4>
+                <p class="text-slate-400 text-xs leading-relaxed">Mantenimiento preventivo garantizado antes de olas de calor. Reparación de climas y mobiliario en menos de 24 horas.</p>
+            </div>
+
+            <!-- Naranja (#fb6023) -->
+            <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800 hover:border-[#fb6023]/50 transition">
+                <div class="text-[#fb6023] text-3xl mb-3"><i class="fa-solid fa-industry"></i></div>
+                <h4 class="text-base font-bold text-white mb-2">Campus Extramuros</h4>
+                <p class="text-slate-400 text-xs leading-relaxed">Prácticas directas en empresas líderes de la región con seguro facultativo, conectando con el entorno industrial real.</p>
+            </div>
+
+            <!-- Celeste (#16c6ed) -->
+            <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800 hover:border-[#16c6ed]/50 transition">
+                <div class="text-[#16c6ed] text-3xl mb-3"><i class="fa-solid fa-[#16c6ed] fa-user-graduate"></i></div>
+                <h4 class="text-base font-bold text-white mb-2">Mentorías entre Pares</h4>
+                <p class="text-slate-400 text-xs leading-relaxed">Asesorías en ciencias básicas impartidas por alumnos destacados antes de exámenes, con beneficios en la cuota interna.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Propuestas Docentes (4 Tarjetas - 4 Colores) -->
+    <section class="max-w-5xl mx-auto px-4 py-8">
+        <h2 class="text-center text-xs font-bold uppercase text-[#16c6ed] tracking-widest mb-2">Cuerpo Académico</h2>
+        <h3 class="text-center text-2xl md:text-3xl font-extrabold text-white mb-8">Propuestas para Docentes</h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- Verde (#60ef65) -->
+            <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800 hover:border-[#60ef65]/50 transition">
+                <div class="text-[#60ef65] text-3xl mb-3"><i class="fa-solid fa-calendar-check"></i></div>
+                <h4 class="text-base font-bold text-white mb-2">Asignación Transparente</h4>
+                <p class="text-slate-400 text-xs leading-relaxed">Proceso colegiado e imparcial para la asignación de cargas horarias según perfil académico, antigüedad y desempeño.</p>
+            </div>
+
+            <!-- Amarillo (#f9c41a) -->
+            <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800 hover:border-[#f9c41a]/50 transition">
+                <div class="text-[#f9c41a] text-3xl mb-3"><i class="fa-solid fa-chair"></i></div>
+                <h4 class="text-base font-bold text-white mb-2">Sala de Maestros Digna</h4>
+                <p class="text-slate-400 text-xs leading-relaxed">Modernización total del espacio docente con estaciones de trabajo equipadas, conectividad de alta velocidad y climatización constante.</p>
+            </div>
+
+            <!-- Naranja (#fb6023) -->
+            <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800 hover:border-[#fb6023]/50 transition">
+                <div class="text-[#fb6023] text-3xl mb-3"><i class="fa-solid fa-[#fb6023] fa-[#fb6023] fa-vial"></i></div>
+                <h4 class="text-base font-bold text-white mb-2">Plataforma SNII / PRODEP</h4>
+                <p class="text-slate-400 text-xs leading-relaxed">Creación de coloquios y comités editoriales locales para facilitar la producción científica y mantener distinciones académicas.</p>
+            </div>
+
+            <!-- Celeste (#16c6ed) -->
+            <div class="bg-[#161f30] p-6 rounded-2xl border border-slate-800 hover:border-[#16c6ed]/50 transition">
+                <div class="text-[#16c6ed] text-3xl mb-3"><i class="fa-solid fa-layer-group"></i></div>
+                <h4 class="text-base font-bold text-white mb-2">Laboratorios Híbridos</h4>
+                <p class="text-slate-400 text-xs leading-relaxed">Optimización e integración de espacios de laboratorio para impartir cátedras prácticas con insumos y equipos multifuncionales.</p>
             </div>
         </div>
     </section>
@@ -153,9 +196,9 @@
                     <h4 class="text-xl font-bold">Ingeniería en Sistemas Computacionales</h4>
                 </div>
                 <ul class="space-y-3 text-slate-300 text-sm">
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#60ef65] mt-1"></i> <span><strong>Desarrollo Interno:</strong> Creación y mantenimiento del Portal Cero Filas en servidores locales de la Facultad[cite: 28].</span></li>
+                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#60ef65] mt-1"></i> <span><strong>Desarrollo Interno:</strong> Creación y mantenimiento del Portal Cero Filas en servidores locales de la Facultad.</span></li>
                     <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#60ef65] mt-1"></i> <span><strong>Redes y Ciberseguridad:</strong> Acceso y certificación en Cisco Networking Academy (CCNA/CCST).</span></li>
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#60ef65] mt-1"></i> <span><strong>Reacreditación CACEI:</strong> Blindaje formal del valor nacional e internacional de tu título[cite: 28].</span></li>
+                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#60ef65] mt-1"></i> <span><strong>Reacreditación CACEI:</strong> Blindaje formal del valor nacional e internacional de tu título.</span></li>
                 </ul>
             </div>
 
@@ -166,9 +209,9 @@
                     <h4 class="text-xl font-bold">Ingeniería Mecánica Electricista</h4>
                 </div>
                 <ul class="space-y-3 text-slate-300 text-sm">
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#f9c41a] mt-1"></i> <span><strong>Campus Industrial Extramuros:</strong> Prácticas directas en plantas de la región con cobertura IMSS[cite: 28].</span></li>
+                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#f9c41a] mt-1"></i> <span><strong>Campus Industrial Extramuros:</strong> Prácticas directas en plantas de la región con cobertura IMSS.</span></li>
                     <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#f9c41a] mt-1"></i> <span><strong>Certificación SolidWorks:</strong> Convenios para certificaciones CSWA/CSWP en diseño y simulación.</span></li>
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#f9c41a] mt-1"></i> <span><strong>Laboratorios Híbridos:</strong> Estaciones modulares para manufactura y mantenimiento industrial[cite: 28].</span></li>
+                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#f9c41a] mt-1"></i> <span><strong>Laboratorios Híbridos:</strong> Estaciones modulares para manufactura y mantenimiento industrial.</span></li>
                 </ul>
             </div>
 
@@ -179,7 +222,7 @@
                     <h4 class="text-xl font-bold">Ingeniería en Mecatrónica</h4>
                 </div>
                 <ul class="space-y-3 text-slate-300 text-sm">
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#fb6023] mt-1"></i> <span><strong>Primera Acreditación CIEES:</strong> Evaluación formal al egreso de la 1ª generación para garantizar tu título[cite: 28].</span></li>
+                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#fb6023] mt-1"></i> <span><strong>Primera Acreditación CIEES:</strong> Evaluación formal al egreso de la 1ª generación para garantizar tu título.</span></li>
                     <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#fb6023] mt-1"></i> <span><strong>Automatización y Control:</strong> Certificaciones en programación de PLCs y brazos robóticos industriales.</span></li>
                     <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#fb6023] mt-1"></i> <span><strong>Módulos Integradores:</strong> Mesas de trabajo equipadas con osciloscopios, fuentes y módulos de neumática.</span></li>
                 </ul>
@@ -192,9 +235,9 @@
                     <h4 class="text-xl font-bold">Ingeniería Biomédica</h4>
                 </div>
                 <ul class="space-y-3 text-slate-300 text-sm">
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#16c6ed] mt-1"></i> <span><strong>Modelo Dual Hospitalario:</strong> Convenios con IMSS, ISSSTE y clínicas privadas para estancias en piso real[cite: 28].</span></li>
+                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#16c6ed] mt-1"></i> <span><strong>Modelo Dual Hospitalario:</strong> Convenios con IMSS, ISSSTE y clínicas privadas para estancias en piso real.</span></li>
                     <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#16c6ed] mt-1"></i> <span><strong>Certificaciones en Bioseguridad:</strong> Alianzas con la plataforma OPS/OMS y metrología clínica.</span></li>
-                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#16c6ed] mt-1"></i> <span><strong>Reacreditación de Calidad:</strong> Respaldo de acreditación académica nacional para la carrera[cite: 28].</span></li>
+                    <li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-[#16c6ed] mt-1"></i> <span><strong>Reacreditación de Calidad:</strong> Respaldo de acreditación académica nacional para la carrera.</span></li>
                 </ul>
             </div>
         </div>
@@ -210,7 +253,7 @@
                 <span class="text-xs font-bold text-[#16c6ed] uppercase tracking-widest">Candidato a la Dirección</span>
                 <h3 class="text-2xl font-bold text-white">Perfil y Trayectoria del Candidato</h3>
                 <p class="text-slate-300 text-xs md:text-sm leading-relaxed">
-                    Docente e investigador comprometido con la FIME Unidad Norte[cite: 28]. Propongo un modelo de gestión transparente, cercano y con resultados reales para alumnos y docentes[cite: 28].
+                    Docente e investigador comprometido con la FIME Unidad Norte. Propongo un modelo de gestión transparente, cercano y con resultados reales para alumnos y docentes.
                 </p>
                 <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-3">
                     <a href="CV_Candidato.pdf" target="_blank" class="bg-[#16c6ed] hover:bg-cyan-400 text-slate-950 font-black px-5 py-2 rounded-lg text-xs transition">
@@ -223,7 +266,7 @@
 
     <!-- Footer -->
     <footer class="text-center py-6 text-xs text-slate-500 border-t border-slate-900">
-        <p>© 2026 Campaña «Con Rola, la FIME Jala» — FIME UAdeC Unidad Norte[cite: 28]</p>
+        <p>© 2026 Campaña «Con Rola, la FIME Jala» — FIME UAdeC Unidad Norte</p>
     </footer>
 
     <!-- Script Interactivo para cambiar pestañas -->
