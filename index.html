@@ -44,19 +44,21 @@
         /* Estilo base inactivo para las pestañas */
         .tab-btn {
             background-color: #161f30;
-            color: #e2e8f0;
+            color: #94a3b8;
             border: 1px solid #334155;
         }
         .tab-btn:hover {
             background-color: #1e293b;
+            color: #f8fafc;
         }
 
-        /* Colores temáticos al activarse */
-        .tab-btn.active-eje1 { background-color: #60ef65; color: #020617; border-color: #60ef65; }
-        .tab-btn.active-eje2 { background-color: #f9c41a; color: #020617; border-color: #f9c41a; }
-        .tab-btn.active-eje3 { background-color: #16c6ed; color: #020617; border-color: #16c6ed; }
-        .tab-btn.active-eje4 { background-color: #fb6023; color: #020617; border-color: #fb6023; }
-        .tab-btn.active-eje5 { background-color: #60ef65; color: #020617; border-color: #60ef65; }
+        /* Estilo activo: Azul destacado con letras blancas */
+        .tab-btn.active-tab { 
+            background-color: #2563eb; 
+            color: #ffffff; 
+            border-color: #3b82f6; 
+            box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.35);
+        }
     </style>
 </head>
 <body class="font-sans antialiased selection:bg-[#16c6ed] selection:text-slate-900">
@@ -102,7 +104,7 @@
 
         <!-- Fila de los 5 Botones de Ejes -->
         <div class="flex flex-wrap justify-center gap-2.5 mb-8">
-            <button onclick="switchCategory('eje1')" id="tab-eje1" class="tab-btn active-eje1 px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
+            <button onclick="switchCategory('eje1')" id="tab-eje1" class="tab-btn active-tab px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
                 <i class="fa-solid fa-graduation-cap"></i> Eje 1: Excelencia y Acreditación
             </button>
             <button onclick="switchCategory('eje2')" id="tab-eje2" class="tab-btn px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2">
@@ -163,7 +165,7 @@
 
     <!-- Script de control interactivo por Eje Estratégico -->
     <script>
-        // Definición de colores principales
+        // Colores asignados a cada una de las 4 tarjetas por eje
         const C_VERDE = '#60ef65';
         const C_AMARILLO = '#f9c41a';
         const C_CELESTE = '#16c6ed';
@@ -203,14 +205,15 @@
         };
 
         function switchCategory(category) {
-            // Actualizar pestañas
+            // Limpiar estado activo de todas las pestañas
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.className = "tab-btn px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2";
             });
             
+            // Asignar estado activo azul con letras blancas a la pestaña seleccionada
             const activeBtn = document.getElementById('tab-' + category);
             if (activeBtn) {
-                activeBtn.classList.add('active-' + category);
+                activeBtn.classList.add('active-tab');
             }
 
             // Renderizar tarjetas dinámicamente con su color de ícono respectivo
